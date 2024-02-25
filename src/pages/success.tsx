@@ -7,14 +7,14 @@ import { stripe } from "../lib/stripe";
 import { ImageContainer, SuccessContainer } from "../styles/pages/success";
 
 interface SuccessProps {
-  costumerName: string;
+  customerName: string;
   product: {
     name: string;
     imageUrl: string;
   }
 }
 
-export default function Success({ costumerName, product }: SuccessProps) {
+export default function Success({ customerName , product }: SuccessProps) {
   return (
     <>
       <Head>
@@ -31,7 +31,7 @@ export default function Success({ costumerName, product }: SuccessProps) {
         </ImageContainer>
 
         <p>
-          Uhuul <strong>{costumerName}</strong>, sua <strong>{product.name}</strong> já está a caminho da sua casa.
+          Uhuul <strong>{customerName }</strong>, sua <strong>{product.name}</strong> já está a caminho da sua casa.
         </p>
 
         <Link href="/">
